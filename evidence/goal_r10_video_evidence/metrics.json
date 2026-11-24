@@ -1,0 +1,12 @@
+{
+  "mouth_open": {
+    "rmse": 0.843,
+    "mean_abs": 0.499,
+    "file": "/home/lilyco/文档/deepseek-harness/default-workspace/vrc-pico4-mouth-test/evidence/goal_r10_video_evidence/mouth_08.png"
+  },
+  "eyes_right": {
+    "rmse": 0.472,
+    "mean_abs": 0.446,
+    "file": "/home/lilyco/文档/deepseek-harness/default-workspace/vrc-pico4-mouth-test/evidence/goal_r10_video_evidence/eyes_08.png"
+  }
+}

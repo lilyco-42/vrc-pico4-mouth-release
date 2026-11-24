@@ -1,0 +1,58 @@
+GOAL_ROUND_45_FINAL_CONFIRMATION
+started=2026-11-23T18:03:29.228Z
+finished=2026-11-23T18:03:31.319Z
+verify_exit=0
+
+--- verify_goal.sh ---
+== service state ==
+vrchat-direct = active
+baballonia-live = active
+bab-osc-bridge.service = active
+bab-osc-bridge.service enabled = enabled
+== sockets and camera ==
+PASS UDP 8888 bridge bound
+PASS UDP 9000 VRChat bound
+PASS /dev/video4 owned by Baballonia
+== OSCQuery avatar/params ==
+avatar = ['Neri']
+writable FT/v2 float params = 30
+JawOpen [0.0]
+MouthLowerDown [0.0]
+MouthUpperUp [0.0]
+EyeLeftX [0.355340242]
+EyeRightX [0.0]
+EyeY [1.0]
+PASS OSCQuery face params
+== live bridge traffic ==
+recent FWD lines = 425
+PASS live camera OSC forwarding
+== evidence files ==
+PASS ROUND5_REPORT.md
+PASS contact.png
+PASS controlled_eye_mouth_animation.mp4
+PASS motion_animation_4states.mp4
+PASS motion_contact.png
+PASS GOAL_COMPLETE.md
+== videos decode nonblack ==
+controlled_eye_mouth_animation.mp4 mean 74.31
+motion_animation_4states.mp4 mean 74.32
+PASS videos decode nonblack
+== summary ==
+PASS_COUNT=16 FAIL_COUNT=0
+
+--- custom manifest verify (ok=12 bad=0 missing=0) ---
+OK	GOAL_COMPLETE.md
+OK	verify_goal.sh
+OK	ensure_vr_face_control.sh
+OK	baballonia_to_neri_bridge.py
+OK	bridge_proof_sender.py
+OK	evidence/goal_r5_bridge_fix/ROUND5_REPORT.md
+OK	evidence/goal_r5_bridge_fix/contact.png
+OK	evidence/goal_r10_video_evidence/controlled_eye_mouth_animation.mp4
+OK	evidence/goal_r11_motion_animation/motion_animation_4states.mp4
+OK	evidence/goal_r23_handoff/HANDOFF.md
+OK	evidence/goal_r34_live_value_variance/LIVE_SAMPLE.json
+OK	evidence/goal_r37_final_verify/FINAL_VERIFY.log
+
+--- services ---
+

@@ -1,0 +1,14 @@
+[Unit]
+Description=Baballonia face/eye camera tracker for VRChat OSC
+After=network.target graphical-session.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=3
+TimeoutStopSec=5
+WorkingDirectory=/home/lilyco/文档/deepseek-harness/default-workspace/vrc-pico4-mouth-test
+ExecStart=/home/lilyco/文档/deepseek-harness/default-workspace/vrc-pico4-mouth-test/run_eye_mouth_test.sh
+
+[Install]
+WantedBy=default.target

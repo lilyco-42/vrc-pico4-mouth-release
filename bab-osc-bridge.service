@@ -1,0 +1,15 @@
+[Unit]
+Description=Baballonia VRCFT OSC to VRChat Neri FT/v2 bridge
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+Environment=MOUTH_GAIN=4.0
+Environment=EYE_GAIN=1.0
+Environment=OPEN_GAIN=10.0
+ExecStart=/usr/bin/python3 -u /home/lilyco/文档/deepseek-harness/default-workspace/vrc-pico4-mouth-test/baballonia_to_neri_bridge.py 8888 127.0.0.1 9000
+
+[Install]
+WantedBy=default.target

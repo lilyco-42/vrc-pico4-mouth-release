@@ -1,0 +1,41 @@
+== ensure VR face control stack ==
+bab-osc-bridge.service already active
+baballonia-live.service already active
+vrchat-direct.service = active (kept as known-good transient launcher; not modified)
+
+== run full verifier ==
+== service state ==
+vrchat-direct = active
+baballonia-live = active
+bab-osc-bridge.service = active
+bab-osc-bridge.service enabled = enabled
+== sockets and camera ==
+PASS UDP 8888 bridge bound
+PASS UDP 9000 VRChat bound
+PASS /dev/video4 owned by Baballonia
+== OSCQuery avatar/params ==
+avatar = ['Neri']
+writable FT/v2 float params = 30
+JawOpen [0.0]
+MouthLowerDown [0.0941868]
+MouthUpperUp [0.1255824]
+EyeLeftX [0.370122433]
+EyeRightX [0.0]
+EyeY [1.0]
+PASS OSCQuery face params
+== live bridge traffic ==
+recent FWD lines = 238
+PASS live camera OSC forwarding
+== evidence files ==
+PASS ROUND5_REPORT.md
+PASS contact.png
+PASS controlled_eye_mouth_animation.mp4
+PASS motion_animation_4states.mp4
+PASS motion_contact.png
+PASS GOAL_COMPLETE.md
+== videos decode nonblack ==
+controlled_eye_mouth_animation.mp4 mean 74.31
+motion_animation_4states.mp4 mean 74.32
+PASS videos decode nonblack
+== summary ==
+PASS_COUNT=16 FAIL_COUNT=0

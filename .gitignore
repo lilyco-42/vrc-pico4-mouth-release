@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Runtime
+*.log
+!evidence/**/*.log
+
+# Large source archives and vendor binaries are intentionally not in this release
+Baballonia.x64.*.tar.xz
+baballonia/
+
+# Local secrets/config
+*.token
+*.secret
+.env

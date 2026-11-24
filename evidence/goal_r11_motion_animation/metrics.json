@@ -1,0 +1,14 @@
+{
+  "mouth_open": {
+    "rmse": 0.54,
+    "mean_abs": 0.439
+  },
+  "eyes_up": {
+    "rmse": 1.179,
+    "mean_abs": 0.513
+  },
+  "eyes_right": {
+    "rmse": 0.714,
+    "mean_abs": 0.473
+  }
+}
